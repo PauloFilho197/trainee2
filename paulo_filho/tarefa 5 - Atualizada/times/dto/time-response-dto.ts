@@ -1,5 +1,6 @@
 import { IsDate, IsInt, IsString,IsNumber } from "class-validator";
 
+
 export class TimeResponseDto{
 
     @IsNumber()
@@ -16,6 +17,9 @@ export class TimeResponseDto{
 
     @IsInt()
     titles: number;
+
+    @IsInt()
+    founded: number;
 
     @IsDate()
     createdAt: Date;

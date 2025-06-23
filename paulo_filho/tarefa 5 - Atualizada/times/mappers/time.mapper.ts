@@ -15,6 +15,7 @@ export class TimeMapper extends BaseMapper<TimeEntity, TimeResponseDto> {
     dto.state = entity.state;
     dto.country = entity.country;
     dto.titles = entity.titles;
+    dto.founded = entity.founded;
     dto.createdAt = entity.createdAt;
     dto.updatedAt = entity.updatedAt;
     return dto;
@@ -26,6 +27,7 @@ export class TimeMapper extends BaseMapper<TimeEntity, TimeResponseDto> {
     entity.state = createDto.state;
     entity.country = createDto.country;
     entity.titles = createDto.titles;
+    entity.founded = createDto.founded;
     return entity;
   }
 

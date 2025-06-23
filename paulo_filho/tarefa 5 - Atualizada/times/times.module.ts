@@ -4,11 +4,12 @@ import { TimesService } from './times.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TimeEntity } from './entity/time.entity';
 import { TimeMapper } from './mappers/time.mapper';
+import { CapitalizeTimeNamePipe } from './pipe/time-name.pipe';
 
 @Module({
   imports:[TypeOrmModule.forFeature([TimeEntity])],
   controllers: [TimesController],
-  providers: [TimesService,TimeMapper],
+  providers: [TimesService,TimeMapper, CapitalizeTimeNamePipe],
   exports:[TimesService, TypeOrmModule]
 })
 export class TimesModule {}

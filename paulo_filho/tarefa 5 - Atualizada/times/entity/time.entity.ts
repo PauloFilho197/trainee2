@@ -19,6 +19,9 @@ export class TimeEntity{
     @Column()
     titles: number;
 
+    @Column()
+    founded: number;
+
     @CreateDateColumn()
     createdAt: Date;
 
